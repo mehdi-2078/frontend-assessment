@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Service from "./components/service";
 import logo from "./logo.svg";
+import {DoctorHead} from "./components/doctorHead/doctorHead";
 
 const App = () => {
   const [data, setData] = useState(null);
@@ -42,6 +43,8 @@ const App = () => {
       <main className="container grid grid-cols-3 pt-10 mx-auto gap-7">
         <div className="flex flex-col col-span-2 gap-5">
           {/* Doctor Head */}
+          <DoctorHead {...data} />
+
           <div className="bg-white rounded-lg h-96 bg-opacity-60" />
           <div className="h-56 bg-white rounded-lg bg-opacity-60" />
         </div>
